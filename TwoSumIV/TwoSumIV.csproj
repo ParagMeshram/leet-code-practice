@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{109F70DB-0DA3-419A-86C0-1479A6DF827C}</ProjectGuid>
+    <ProjectGuid>{C7B91200-2ADA-4730-9C23-CC8CE7944190}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LongestSubstring</RootNamespace>
-    <AssemblyName>LongestSubstring</AssemblyName>
+    <RootNamespace>TwoSumIV</RootNamespace>
+    <AssemblyName>TwoSumIV</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

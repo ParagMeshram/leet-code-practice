@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{109F70DB-0DA3-419A-86C0-1479A6DF827C}</ProjectGuid>
+    <ProjectGuid>{F7186F4F-E26A-440C-8442-F817519ED3D7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LongestSubstring</RootNamespace>
-    <AssemblyName>LongestSubstring</AssemblyName>
+    <RootNamespace>AddStrings</RootNamespace>
+    <AssemblyName>AddStrings</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
