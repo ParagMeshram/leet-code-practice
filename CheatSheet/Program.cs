@@ -282,3 +282,45 @@ namespace CheatSheet.Difference.Between.Jagged.Array.vs.Array
         }
     }
 }
+
+namespace CheatSheet.How.To.Sort.List
+{
+    using System;
+    using System.Linq;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Text;
+
+    internal class Program
+    {
+        public static void Main()
+        {
+            List<int> list = new List<int> { 2, 3, 4, 5, 6, 7, 8 }; //^^^ Use List and not IList
+
+            list.Sort();
+        }
+    }
+}
+
+namespace CheatSheet.How.To.Trim.Array.With.Preceding.Zeros
+{
+    using System;
+    using System.Linq;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Text;
+
+    internal class Program
+    {
+        public static void Main()
+        {
+            var array = new[] { 0, 0, 0, 0, 0, 1234, 0, 0, 0, 0 };
+
+            foreach (var digit in array.SkipWhile(d => d == 0))
+            {
+                Console.Write(digit);
+            }
+
+        }
+    }
+}

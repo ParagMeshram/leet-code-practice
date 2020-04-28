@@ -53,11 +53,11 @@
 
             for (var index = 0; index < item.Length - 1; index++)
             {
-                var diff = item[index + 1] - item[index];
+                var diff = item[index + 1] - item[index]; //^^^
 
-                if (diff < 0) diff += 26;
+                if (diff < 0) diff += 26; //^^^
 
-                keyBuilder.Append(diff); //^^^
+                keyBuilder.Append(diff); 
             }
 
             return keyBuilder.ToString();

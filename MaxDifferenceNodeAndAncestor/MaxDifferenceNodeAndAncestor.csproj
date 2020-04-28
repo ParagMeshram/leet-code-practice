@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE4DF020-6699-4A76-9E58-AAB5D54049DE}</ProjectGuid>
+    <ProjectGuid>{F0DEA695-F80E-4BF2-B9C3-63A7ED92C357}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CheatSheet</RootNamespace>
-    <AssemblyName>CheatSheet</AssemblyName>
+    <RootNamespace>MaxDifferenceNodeAndAncestor</RootNamespace>
+    <AssemblyName>MaxDifferenceNodeAndAncestor</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,9 +31,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>CheatSheet.How.To.Trim.Array.With.Preceding.Zeros.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
