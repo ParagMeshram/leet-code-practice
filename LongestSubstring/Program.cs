@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LongestSubstring
 {
@@ -10,7 +7,6 @@ namespace LongestSubstring
     {
         private static void Main()
         {
-
             int[][] jagged_arr = new int[4][];
 
             // Initialize the elements 
@@ -42,10 +38,10 @@ namespace LongestSubstring
             // Initialize the elements 
             array = new int[,]
             {
-                { 1, 2, 3, 4, 9, 7 },
-                { 6, 9, 3, 10, 4, 2 },
-                { 56, 1, 45, 4, 1, 0 },
-                { 1, 99, 3, 4, 4, 8 },
+                {1, 2, 3, 4, 9, 7},
+                {6, 9, 3, 10, 4, 2},
+                {56, 1, 45, 4, 1, 0},
+                {1, 99, 3, 4, 4, 8},
             };
 
             for (int i = 0; i < array.GetLength(0); i++)
@@ -72,16 +68,16 @@ namespace LongestSubstring
             Console.ReadKey();
         }
     }
-    
+
     public class Solution
     {
         public int LengthOfLongestSubstring(string s)
         {
             var hashSet = s.GroupBy(c => c)
-                           .Select(c => new { Char = c.Key, Count = c.Count() })
-                           .Where(c => c.Count > 1)
-                           .Select(c=> c.Char)
-                           .ToHashSet();
+                .Select(c => new { Char = c.Key, Count = c.Count() })
+                .Where(c => c.Count > 1)
+                .Select(c => c.Char)
+                .ToHashSet();
             var max = 0;
             var distinct = 0;
 

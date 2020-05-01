@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FirstMissingPositive
 {
@@ -10,7 +7,7 @@ namespace FirstMissingPositive
     {
         private static void Main()
         {
-            var array = new[] {3, 4, -1, 1};
+            var array = new[] { 3, 4, -1, 1 };
 
             var solution = new Solution();
 

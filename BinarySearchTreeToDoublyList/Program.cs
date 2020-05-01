@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BinarySearchTreeToDoublyList
 {
-    using System.CodeDom;
-    using System.Diagnostics.Eventing.Reader;
-
     public class Node
     {
         public int val;
         public Node left;
         public Node right;
 
-        public Node() { }
+        public Node()
+        {
+        }
 
         public Node(int _val)
         {
@@ -81,12 +76,13 @@ namespace BinarySearchTreeToDoublyList
     {
         private Node head;
         private Node tail;
+
         public Node TreeToDoublyList(Node root)
         {
             if (root == null) return null;
 
             Traversal(root);
-            
+
             return head;
         }
 

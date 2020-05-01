@@ -19,12 +19,13 @@
     public static class ShuntingYard
     {
         private static readonly Dictionary<string, (string symbol, int precedence, bool rightAssociative)> operators
-            = new (string symbol, int precedence, bool rightAssociative)[] {
-            ("*", 3, false),
-            ("/", 3, false),
-            ("+", 2, false),
-            ("-", 2, false)
-        }.ToDictionary(op => op.symbol);
+            = new (string symbol, int precedence, bool rightAssociative)[]
+            {
+                ("*", 3, false),
+                ("/", 3, false),
+                ("+", 2, false),
+                ("-", 2, false)
+            }.ToDictionary(op => op.symbol);
 
         public static string ToPostfix(this string infix)
         {
@@ -43,6 +44,7 @@
                     while (stack.Count > 0 && operators.TryGetValue(stack.Peek(), out var op2))
                     {
                         var c = op1.precedence.CompareTo(op2.precedence);
+
                         if (c < 0 || !op1.rightAssociative && c <= 0)
                         {
                             output.Add(stack.Pop());
@@ -52,6 +54,7 @@
                             break;
                         }
                     }
+
                     stack.Push(token);
                 }
                 else if (token == "(")
@@ -61,7 +64,7 @@
                 else if (token == ")")
                 {
                     var top = "";
-                    
+
                     while (stack.Count > 0 && (top = stack.Pop()) != "(")
                     {
                         output.Add(top);
@@ -70,6 +73,7 @@
                     if (top != "(") throw new ArgumentException("No matching left parenthesis.");
                 }
             }
+
             while (stack.Count > 0)
             {
                 var top = stack.Pop();
@@ -78,10 +82,6 @@
             }
 
             return string.Join(" ", output);
-
-
         }
     }
-
-
 }

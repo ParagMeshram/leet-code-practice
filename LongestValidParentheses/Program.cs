@@ -1,10 +1,7 @@
 ﻿namespace LongestValidParentheses
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Diagnostics.Eventing.Reader;
-    using System.Security.Cryptography;
 
     internal class Program
     {
@@ -13,13 +10,11 @@
             var o = new Solution();
 
             Console.WriteLine(o.LongestValidParenthesesStack(")()("));
-            
         }
     }
 
     public class Solution
     {
-
         public int LongestValidParenthesesStack(string input)
         {
             var longest = 0;
@@ -36,6 +31,7 @@
                 else
                 {
                     stack.Pop();
+
                     if (stack.Count == 0)
                     {
                         stack.Push(index);
@@ -102,9 +98,9 @@
 
         private IDictionary<char, char> braces = new Dictionary<char, char>
         {
-            { ')', '(' },
-            { '}', '{' },
-            { ']', '[' }
+            {')', '('},
+            {'}', '{'},
+            {']', '['}
         };
 
         private bool IsClosing(char brace)

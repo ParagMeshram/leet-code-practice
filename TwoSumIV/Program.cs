@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace TwoSumIV
 {
@@ -12,7 +8,10 @@ namespace TwoSumIV
         public TreeNode Left;
         public TreeNode Right;
 
-        public TreeNode(int value) { this.Value = value; }
+        public TreeNode(int value)
+        {
+            this.Value = value;
+        }
     }
 
     internal class Program
@@ -71,7 +70,6 @@ namespace TwoSumIV
 
             return false;
         }
-
 
 
         public bool FindTarget3(TreeNode root, int target)

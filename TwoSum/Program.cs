@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 namespace TwoSum
 {
-    using System.Linq;
-
     class Program
     {
         static void Main(string[] args)
@@ -31,9 +29,9 @@ namespace TwoSum
             for (var index = 0; index < nums.Length; index++)
             {
                 var complement = target - nums[index];
-                
+
                 if (lookup.ContainsKey(complement))
-                    return new [] { lookup[complement], index };
+                    return new[] { lookup[complement], index };
 
                 lookup.Add(nums[index], index);
             }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShortestWordDistance
 {
@@ -10,15 +6,16 @@ namespace ShortestWordDistance
     {
         private static void Main()
         {
-            var solution = new Solution();
+            var solution = new SolutionBruteForce();
 
-            Console.WriteLine(solution.ShortestDistance("practice makes perfect coding makes".Split(), "coding", "practice"));
+            Console.WriteLine(solution.ShortestDistance("practice makes perfect coding makes".Split(), "coding",
+                "practice"));
         }
     }
 
-    public class Solution
+    public class SolutionBruteForce
     {
-        public int ShortestDistanceBruteForce(string[] words, string word1, string word2)
+        public int ShortestDistance(string[] words, string word1, string word2)
         {
             if (words == null || words.Length == 0) return 0;
 
@@ -40,8 +37,11 @@ namespace ShortestWordDistance
 
             return distance;
         }
+    }
 
-        public int ShortestDistanceOptimal(string[] words, string word1, string word2)
+    public class SolutionOptimal
+    {
+        public int ShortestDistance(string[] words, string word1, string word2)
         {
             if (words == null || words.Length == 0) return 0;
 

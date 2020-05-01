@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TaskScheduler
 {
-    using System.Runtime.CompilerServices;
-
     internal class Program
     {
         private static void Main()
@@ -69,6 +64,7 @@ namespace TaskScheduler
     {
         private int index;
         private readonly SortedSet<PQItem> items;
+
         private class PQItem
         {
             public T Value { get; set; }
@@ -79,7 +75,8 @@ namespace TaskScheduler
         {
             comparer = comparer ?? Comparer<T>.Default;
 
-            this.items = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) => comparer.Compare(x.Value, y.Value) == 0 ? x.Index - y.Index : comparer.Compare(x.Value, y.Value)));
+            this.items = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) =>
+                comparer.Compare(x.Value, y.Value) == 0 ? x.Index - y.Index : comparer.Compare(x.Value, y.Value)));
         }
 
         public void Enqueue(T value)
@@ -102,13 +99,8 @@ namespace TaskScheduler
 
         public int Count
         {
-            get
-            {
-                return this.items.Count;
-            }
+            get { return this.items.Count; }
         }
-
-
     }
 
     public class SolutionUsingPriorityQueue
@@ -146,6 +138,7 @@ namespace TaskScheduler
                         else
                             queue.Dequeue();
                     }
+
                     time++;
                     if (queue.Count > 0 && temp.Count == 0)
                         break;

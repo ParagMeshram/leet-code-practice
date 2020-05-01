@@ -7,9 +7,15 @@
     public static class CharComparision
     {
         public static readonly CharComparer CurrentCulture = new CharComparer(StringComparison.CurrentCulture);
-        public static readonly CharComparer CurrentCultureIgnoreCase = new CharComparer(StringComparison.CurrentCultureIgnoreCase);
+
+        public static readonly CharComparer CurrentCultureIgnoreCase =
+            new CharComparer(StringComparison.CurrentCultureIgnoreCase);
+
         public static readonly CharComparer InvariantCulture = new CharComparer(StringComparison.InvariantCulture);
-        public static readonly CharComparer InvariantCultureIgnoreCase = new CharComparer(StringComparison.InvariantCultureIgnoreCase);
+
+        public static readonly CharComparer InvariantCultureIgnoreCase =
+            new CharComparer(StringComparison.InvariantCultureIgnoreCase);
+
         public static readonly CharComparer Ordinal = new CharComparer(StringComparison.Ordinal);
         public static readonly CharComparer OrdinalIgnoreCase = new CharComparer(StringComparison.OrdinalIgnoreCase);
 

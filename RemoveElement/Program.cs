@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RemoveElement
 {
@@ -87,4 +83,3 @@ namespace RemoveElement
 // Index => 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
 // Nums  => 11, 29, 23,  4, 51,  14, 14,  6, 90, 18
 // Ptrs  =>                           f   s
-

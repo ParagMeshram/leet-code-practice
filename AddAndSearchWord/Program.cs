@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace AddAndSearchWord
 {
@@ -68,7 +64,7 @@ namespace AddAndSearchWord
         {
             if (matchCount == word.Length) return node.IsLeaf;
 
-            if (node.IsLeaf) return false;
+            return (!node.IsLeaf);
         }
 
         private class Node
@@ -93,7 +89,7 @@ namespace AddAndSearchWord
 
             public void AddChildren(char ch, int depth)
             {
-                if(!this.Children.ContainsKey(ch))
+                if (!this.Children.ContainsKey(ch))
                     this.Children[ch] = new Node(ch, depth);
             }
 

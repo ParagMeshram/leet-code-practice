@@ -2,13 +2,11 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Text.RegularExpressions;
 
     class Program
     {
         static void Main(string[] args)
         {
-            
         }
     }
 
@@ -48,13 +46,13 @@
             {
                 case "+":
                     return first + second;
-				
+
                 case "-":
                     return first - second;
-				
+
                 case "*":
                     return first * second;
-				
+
                 case "/":
                     return first / second;
 

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KthLargest
 {
@@ -38,7 +35,8 @@ namespace KthLargest
         public PriorityQueue(QueueType type = QueueType.Min, IComparer<T> comparer = null)
         {
             comparer = comparer ?? Comparer<T>.Default;
-            set = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) => comparer.Compare(x.Value, y.Value) == 0 ? x.Index - y.Index : comparer.Compare(x.Value, y.Value)));
+            set = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) =>
+                comparer.Compare(x.Value, y.Value) == 0 ? x.Index - y.Index : comparer.Compare(x.Value, y.Value)));
             this.type = type;
         }
 
@@ -49,11 +47,24 @@ namespace KthLargest
             set.Add(new PQItem { Value = value, Index = index++ });
         }
 
-        public T Dequeue()
+        public T Peek()
+        {
+            return PeekInternal().Value;
+        }
+
+        private PQItem PeekInternal()
         {
             if (Count == 0) throw new InvalidOperationException();
 
             var item = type == QueueType.Min ? set.Min : this.set.Max;
+            return item;
+        }
+
+        public T Dequeue()
+        {
+            if (Count == 0) throw new InvalidOperationException();
+
+            var item = PeekInternal();
             set.Remove(item);
             return item.Value;
         }

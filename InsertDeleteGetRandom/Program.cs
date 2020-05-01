@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InsertDeleteGetRandom
 {
@@ -10,11 +7,10 @@ namespace InsertDeleteGetRandom
     {
         private static void Main()
         {
-
         }
     }
 
-	public class RandomizedSet
+    public class RandomizedSet
     {
         private readonly IDictionary<int, int> hashMap;
         private readonly IList<int> numbers;

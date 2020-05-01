@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LongestSubstringWithoutRepeatingChars
 {
@@ -91,7 +88,7 @@ namespace LongestSubstringWithoutRepeatingChars
             var length = input.Length;
 
             while (start < length && end < length)
-            {   
+            {
                 if (!set.Contains(input[end]))
                 {
                     set.Add(input[end++]);

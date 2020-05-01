@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KClosestPointsToOrigin
 {
-    using System.Collections;
-
     internal class Program
     {
         private static void Main()
@@ -51,7 +47,8 @@ namespace KClosestPointsToOrigin
         public PriorityQueue(IComparer<T> comparer = null)
         {
             comparer = comparer ?? Comparer<T>.Default;
-            set = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) => comparer.Compare(x.Item, y.Item) == 0 ? x.Index - y.Index : comparer.Compare(x.Item, y.Item)));
+            set = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) =>
+                comparer.Compare(x.Item, y.Item) == 0 ? x.Index - y.Index : comparer.Compare(x.Item, y.Item)));
         }
 
         public void Enqueue(T item)
@@ -103,7 +100,7 @@ namespace KClosestPointsToOrigin
         public int[][] KClosest(int[][] points, int K)
         {
             var queue = new PriorityQueue<Point>(Comparer<Point>.Create((x, y) => x.Distance.CompareTo(y.Distance)));
-            
+
             foreach (var point in points)
             {
                 queue.Enqueue(new Point(point[0], point[1]));

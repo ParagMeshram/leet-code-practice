@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MinWindowSubstring
 {
@@ -21,7 +19,7 @@ namespace MinWindowSubstring
         public string MinWindow(string s, string t)
         {
             var lookup = t.GroupBy(ch => ch)
-                          .ToLookup(g => g.Key, g => g.Count());
+                .ToLookup(g => g.Key, g => g.Count());
 
             var window = new StringBuilder(s.Length);
 
@@ -33,7 +31,6 @@ namespace MinWindowSubstring
 
             while (rightIndex < s.Length)
             {
-
                 var right = s[rightIndex];
 
                 if (lookup.Contains(right))
@@ -45,17 +42,15 @@ namespace MinWindowSubstring
                         while (leftIndex < rightIndex)
                         {
                             var left = s[leftIndex];
-
                         }
                     }
                 }
 
 
+                rightIndex++;
+            }
 
-                //    rightIndex++;
-                //}
-
-                return window.ToString();
+            return window.ToString();
         }
     }
 }

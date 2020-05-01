@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Candy
 {
@@ -67,33 +64,5 @@ namespace Candy
              ----------*-----------
                 1  2   3   4   5   
         */
-
-
-
-        public int Candy(int[] ratings)
-        {
-            var candies = new int[ratings.Length];
-
-            for (var index = 0; index < ratings.Length; index++)
-            {
-                candies[index] = 1;
-            }
-
-
-        }
-
-        private int FindMinimumRating(int[] ratings)
-        {
-            var min = ratings[0];
-
-            for (var index = 0; index < ratings.Length; index++)
-            {
-                min = Math.Min(min, ratings[index]);
-            }
-
-            return min;
-        }
     }
 }
-
-

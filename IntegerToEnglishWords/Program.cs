@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IntegerToEnglishWords
 {
@@ -19,8 +15,6 @@ namespace IntegerToEnglishWords
             const int OneBillion = 1_000_000_000;
 
 
-
-
             var o = new SolutionFoundOnline();
             Console.WriteLine(o.NumberToWords(500_000));
             Console.ReadKey();
@@ -29,9 +23,16 @@ namespace IntegerToEnglishWords
 
     public class SolutionFoundOnline
     {
-        private readonly string[] belowTen = { "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
-        private readonly string[] belowTwenty = { "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
-        private readonly string[] belowHundred = { "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
+        private readonly string[] belowTen =
+            {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+
+        private readonly string[] belowTwenty =
+        {
+            "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"
+        };
+
+        private readonly string[] belowHundred =
+            {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
 
         public string NumberToWords(int num)
         {
@@ -60,9 +61,16 @@ namespace IntegerToEnglishWords
         private const int ONE_MILLION = 1_000_000;
         private const int ONE_BILLION = 1_000_000_000;
 
-        private readonly string[] belowTen = { "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
-        private readonly string[] belowTwenty = { "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
-        private readonly string[] belowHundred = { "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
+        private readonly string[] belowTen =
+            {"", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+
+        private readonly string[] belowTwenty =
+        {
+            "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"
+        };
+
+        private readonly string[] belowHundred =
+            {"", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
 
         public string NumberToWords(int num)
         {
@@ -76,11 +84,17 @@ namespace IntegerToEnglishWords
             if (num < 10) return this.belowTen[num];
             if (num < 20) return this.belowTwenty[num % 10];
             if (num < 100) return $"{this.belowHundred[num / 10]} {this.belowTen[num % 10]}".Trim();
-            if (num < 1_000) return $"{NumberToWordsRecursive(num / 100)} Hundred {NumberToWordsRecursive(num % 100)}".Trim();
-            if (num < 1_000_000) return $"{NumberToWordsRecursive(num / 1000)} Thousand {NumberToWordsRecursive(num % 1000)}".Trim();
-            if (num < 1_000_000_000) return $"{NumberToWordsRecursive(num / 1_000_000)} Million {NumberToWordsRecursive(num % 1_000_000)}".Trim();
+            if (num < 1_000)
+                return $"{NumberToWordsRecursive(num / 100)} Hundred {NumberToWordsRecursive(num % 100)}".Trim();
+            if (num < 1_000_000)
+                return $"{NumberToWordsRecursive(num / 1000)} Thousand {NumberToWordsRecursive(num % 1000)}".Trim();
+            if (num < 1_000_000_000)
+                return $"{NumberToWordsRecursive(num / 1_000_000)} Million {NumberToWordsRecursive(num % 1_000_000)}"
+                    .Trim();
 
-            return $"{NumberToWordsRecursive(num / 1_000_000_000)} Billion {NumberToWordsRecursive(num % 1_000_000_000)}".Trim();
+            return
+                $"{NumberToWordsRecursive(num / 1_000_000_000)} Billion {NumberToWordsRecursive(num % 1_000_000_000)}"
+                    .Trim();
         }
     }
 }

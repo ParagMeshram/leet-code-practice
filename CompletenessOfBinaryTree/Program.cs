@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompletenessOfBinaryTree
 {
@@ -52,7 +48,8 @@ namespace CompletenessOfBinaryTree
             if (index >= count)
                 return false;
 
-            return IsCompleteSubtree(root.left, 2 * index + 1, count) && IsCompleteSubtree(root.right, 2 * index + 2, count);
+            return IsCompleteSubtree(root.left, 2 * index + 1, count) &&
+                   IsCompleteSubtree(root.right, 2 * index + 2, count);
         }
 
         private static int CountNodes(Node root)
@@ -61,33 +58,5 @@ namespace CompletenessOfBinaryTree
 
             return (1 + CountNodes(root.left) + CountNodes(root.right));
         }
-
     }
-
-
-    public class Solution
-    {
-        public bool IsCompleteTree(Node root)
-        {
-            var count = CountNodes(root);
-            
-        }
-
-        private static bool IsCompleteSubtree(Node root, int index, int count)
-        {
-            if (root == null) return true;
-
-            return (IsCompleteSubtree(root.left, /*calc index*/, count) && IsCompleteSubtree(root.right, /*calc index*/, count))
-        }
-
-        private static int CountNodes(Node root)
-        {
-            if (root == null) return 0;
-
-            return (1 + CountNodes(root.left) + CountNodes(root.right));
-        }
-
-    }
-
-
 }

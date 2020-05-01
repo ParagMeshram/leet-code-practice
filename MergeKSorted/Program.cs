@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MergeKSorted
 {
-    using System.Collections;
-
     internal class Program
     {
         private static void Main()
@@ -22,7 +17,6 @@ namespace MergeKSorted
             //lists[1] = new ListNode(1, new ListNode(1, new ListNode(2)));
 
 
-
             lists[0] = new ListNode(-2, new ListNode(-1, new ListNode(-1)));
             lists[1] = null;
 
@@ -35,14 +29,17 @@ namespace MergeKSorted
     }
 
 
-
     // Definition for singly-linked list
 
     public class ListNode
     {
         public int val;
         public ListNode next;
-        public ListNode(int x) { val = x; }
+
+        public ListNode(int x)
+        {
+            val = x;
+        }
 
         public ListNode(int val, ListNode next = null)
         {
@@ -78,7 +75,8 @@ namespace MergeKSorted
             public PriorityQueue(IComparer<T> comparer = null)
             {
                 comparer = comparer ?? Comparer<T>.Default;
-                set = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) => comparer.Compare(x.Item, y.Item) == 0 ? x.Index - y.Index : comparer.Compare(x.Item, y.Item)));
+                set = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) =>
+                    comparer.Compare(x.Item, y.Item) == 0 ? x.Index - y.Index : comparer.Compare(x.Item, y.Item)));
             }
 
             public void Enqueue(T item)

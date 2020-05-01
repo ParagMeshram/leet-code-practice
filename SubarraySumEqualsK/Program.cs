@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SubarraySumEqualsK
 {
@@ -10,7 +6,6 @@ namespace SubarraySumEqualsK
     {
         private static void Main()
         {
-            Array.Copy();
             var array = new[]
             {
                 1, 2, 1, 2, 1
@@ -34,7 +29,7 @@ namespace SubarraySumEqualsK
 
             for (var start = 0; start < nums.Length; start++)
             {
-                for (var end = start; end < nums.Length; end++) 
+                for (var end = start; end < nums.Length; end++)
                 {
                     var sum = 0;
 
@@ -61,7 +56,7 @@ namespace SubarraySumEqualsK
         {
             if (nums == null || nums.Length == 0) return 0;
 
-            var prefix = new int [nums.Length + 1];
+            var prefix = new int[nums.Length + 1];
 
             prefix[0] = 0;
 

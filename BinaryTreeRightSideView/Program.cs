@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BinaryTreeRightSideView
 {
-    using System.Collections.ObjectModel;
-
     class Program
     {
         static void Main(string[] args)
@@ -16,13 +11,16 @@ namespace BinaryTreeRightSideView
     }
 
 
-
     public class TreeNode
     {
         public int val;
         public TreeNode left;
         public TreeNode right;
-        public TreeNode(int x) { val = x; }
+
+        public TreeNode(int x)
+        {
+            val = x;
+        }
     }
 
 

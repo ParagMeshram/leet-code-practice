@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Linq;
 using System.Collections.Generic;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace BinaryTreeSerializer
 {
@@ -18,7 +16,11 @@ namespace BinaryTreeSerializer
         public int Value;
         public TreeNode Left;
         public TreeNode Right;
-        public TreeNode(int x) { Value = x; }
+
+        public TreeNode(int x)
+        {
+            Value = x;
+        }
     }
 
 
@@ -47,7 +49,6 @@ namespace BinaryTreeSerializer
 
     public class Codec
     {
-
         // Encodes a tree to a single string.
         // DFS => Preorder Traversal => root, left, right
         public string serialize(TreeNode root)

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace CloneGraph
 {
@@ -74,7 +70,6 @@ namespace CloneGraph
     }
 
 
-
     /*             
      *      A------R <--- node
      *      |      | \ 
@@ -97,7 +92,7 @@ namespace CloneGraph
             // Visit the node
 
             if (this.visited.ContainsKey(node)) return this.visited[node];
-            
+
             this.visited[node] = new Node(node.val);
 
             if (node.neighbors.Count > 0)

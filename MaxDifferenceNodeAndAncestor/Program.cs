@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MaxDifferenceNodeAndAncestor
 {
@@ -18,14 +14,17 @@ namespace MaxDifferenceNodeAndAncestor
         public int val;
         public TreeNode left;
         public TreeNode right;
-        public TreeNode(int x) { val = x; }
+
+        public TreeNode(int x)
+        {
+            val = x;
+        }
     }
 
     public class Solution
     {
         public int MaxAncestorDiff(TreeNode root)
         {
-
             var lmin = int.MaxValue;
             var lmax = int.MinValue;
 
@@ -54,7 +53,6 @@ namespace MaxDifferenceNodeAndAncestor
 
             var rmin = min;
             var rmax = max;
-
 
 
             if (n.left != null)

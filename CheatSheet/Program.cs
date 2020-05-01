@@ -75,7 +75,6 @@ namespace CheatSheet.DictionaryWithCaseInSensetiveComparision
 {
     using System;
     using System.Collections.Generic;
-    using System.Text.RegularExpressions;
 
 
     public sealed class CharEqualityComparer : IEqualityComparer<char> //^^^
@@ -199,7 +198,8 @@ namespace CheatSheet.Print.All.Substrings.Of.A.String
 
         public PriorityQueue()
         {
-            set = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) => x.Item.CompareTo(y.Item) == 0 ? x.Index - y.Index : x.Item.CompareTo(y.Item)));
+            set = new SortedSet<PQItem>(Comparer<PQItem>.Create((x, y) =>
+                x.Item.CompareTo(y.Item) == 0 ? x.Index - y.Index : x.Item.CompareTo(y.Item)));
         }
 
         public void Enqueue(T item)
@@ -219,7 +219,6 @@ namespace CheatSheet.Print.All.Substrings.Of.A.String
 namespace CheatSheet.Difference.Between.Jagged.Array.vs.Array
 {
     using System;
-    using System.Collections.Generic;
 
     internal class Program
     {
@@ -256,10 +255,10 @@ namespace CheatSheet.Difference.Between.Jagged.Array.vs.Array
             // Initialize the elements 
             array = new int[,]
             {
-                { 1, 2, 3, 4, 9, 7 },
-                { 6, 9, 3, 10, 4, 2 },
-                { 56, 1, 45, 4, 1, 0 },
-                { 1, 99, 3, 4, 4, 8 },
+                {1, 2, 3, 4, 9, 7},
+                {6, 9, 3, 10, 4, 2},
+                {56, 1, 45, 4, 1, 0},
+                {1, 99, 3, 4, 4, 8},
             };
 
             for (int i = 0; i < array.GetLength(0); i++)
@@ -285,11 +284,7 @@ namespace CheatSheet.Difference.Between.Jagged.Array.vs.Array
 
 namespace CheatSheet.How.To.Sort.List
 {
-    using System;
-    using System.Linq;
-    using System.Collections;
     using System.Collections.Generic;
-    using System.Text;
 
     internal class Program
     {
@@ -306,9 +301,6 @@ namespace CheatSheet.How.To.Trim.Array.With.Preceding.Zeros
 {
     using System;
     using System.Linq;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Text;
 
     internal class Program
     {
@@ -320,7 +312,6 @@ namespace CheatSheet.How.To.Trim.Array.With.Preceding.Zeros
             {
                 Console.Write(digit);
             }
-
         }
     }
 }

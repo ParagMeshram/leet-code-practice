@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SearchInRotatedSortedArray
 {
-    using System.Runtime.InteropServices;
-
     internal class Program
     {
         private static void Main(string[] args)
@@ -88,6 +82,7 @@ namespace SearchInRotatedSortedArray
 
             return Search(nums, 0, pivot, target);
         }
+
         // [7,9,0,1,2,3]
         //        ^  
         private int FindPivot(int[] nums) //^^^

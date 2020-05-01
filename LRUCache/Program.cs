@@ -1,18 +1,12 @@
 ﻿namespace LRUCache
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
     internal class Program
     {
         private static void Main(string[] args)
         {
             //["LRUCache","put","put","get","put","get","put","get","get","get"]
 
-            var cache = new LRUCache.LinkedHashMap.LRUCache(2);
+            var cache = new LRUCache.LinkedHashMap.Optimised.LRUCache(2);
             cache.Put(1, 1);
             cache.Put(2, 2);
             cache.Get(1);
@@ -24,7 +18,6 @@
             cache.Get(4);
         }
     }
-
 }
 
 namespace LRUCache.LinkedHashMap.Optimised

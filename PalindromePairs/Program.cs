@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PalindromePairs
 {
@@ -17,11 +14,11 @@ namespace PalindromePairs
             Console.ReadKey();
         }
     }
-    
+
 
     public class Solution
     {
-		public IList<IList<int>> PalindromePairs(string[] words)
+        public IList<IList<int>> PalindromePairs(string[] words)
         {
             IList<IList<int>> result = new List<IList<int>>();
 
@@ -60,7 +57,5 @@ namespace PalindromePairs
 
             return true;
         }
-
-
-	}
+    }
 }

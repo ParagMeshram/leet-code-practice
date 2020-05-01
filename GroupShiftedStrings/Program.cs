@@ -4,7 +4,6 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using System.Threading.Tasks;
 
     internal class Program
     {
@@ -27,7 +26,7 @@
             // Z => 90 (65 + 26)
             // a => 97
             // z => 122 (97 + 26)
-            
+
             var map = new Dictionary<string, IList<string>>(); //^^^
 
             foreach (var item in strings)
@@ -57,12 +56,10 @@
 
                 if (diff < 0) diff += 26; //^^^
 
-                keyBuilder.Append(diff); 
+                keyBuilder.Append(diff);
             }
 
             return keyBuilder.ToString();
         }
     }
-
-
 }

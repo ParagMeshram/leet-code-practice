@@ -76,5 +76,5 @@ namespace ValidAnagram
 
             return true;
         }
-	}
+    }
 }

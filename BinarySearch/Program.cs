@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BinarySearch
 {
@@ -15,7 +11,7 @@ namespace BinarySearch
             //Console.WriteLine(BinarySearch(array, 3));
 
 
-            array = new[] {1,2,3,4,5,6,7,8,9};
+            array = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             Console.WriteLine(BinarySearchUsingRecursion(array, 9));
 
             Console.ReadKey();
@@ -79,10 +75,10 @@ namespace BinarySearch
             if (low > high) return -1;
 
             var mid = (low + high) / 2;
-            
+
             if (input[mid] == target) return mid;
 
-            if (input[mid] < target) 
+            if (input[mid] < target)
                 return BinarySearchInternal(input, mid + 1, high, target);
             else
                 return BinarySearchInternal(input, low, mid - 1, target);

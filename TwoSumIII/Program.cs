@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace TwoSumIII
 {
@@ -13,8 +9,6 @@ namespace TwoSumIII
             //var obj = new TwoSum();
             //obj.Add(number);
             //bool param_2 = obj.Find(value);
-
-
         }
     }
 
@@ -24,7 +18,6 @@ namespace TwoSumIII
 
         public TwoSum()
         {
-
         }
 
         public void Add(int number)

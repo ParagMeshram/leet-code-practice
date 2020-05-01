@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MinStack
 {
-    using System.Runtime.Remoting.Messaging;
     using PriorityQueue = System.Collections.Generic.SortedSet<int>;
 
     internal class Program
     {
         private static void Main()
         {
-
         }
     }
 
@@ -23,7 +18,6 @@ namespace MinStack
 
         public MinStack()
         {
-            
         }
 
         public void Push(int x)
@@ -54,8 +48,8 @@ namespace MinStack
         }
 
         private class Node
-        {   
-            public int Value { get; set; } 
+        {
+            public int Value { get; set; }
             public int MinValue { get; set; }
             public Node Next { get; set; }
 
@@ -73,7 +67,7 @@ namespace MinStack
         private readonly Stack<int> stack;
         private readonly PriorityQueue heap;
 
-        public MinStack()
+        public MinStackLogN()
         {
             stack = new Stack<int>();
             heap = new PriorityQueue();
