@@ -170,8 +170,6 @@ namespace CheatSheet.Print.All.Substrings.Of.A.String
     {
         public static void Main()
         {
-            var n = 2_147_483_647;
-
             const string input = "Parag";
 
             for (var i = 0; i < input.Length; i++)

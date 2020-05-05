@@ -4,8 +4,13 @@ namespace BinarySearch
 {
     internal class Program
     {
+        public static string Sample = "Parag";
+
         private static void Main()
         {
+
+            SomeFunction(Sample);
+
             var array = new int[] { 5, 1, 3 };
 
             //Console.WriteLine(BinarySearch(array, 3));
@@ -15,6 +20,11 @@ namespace BinarySearch
             Console.WriteLine(BinarySearchUsingRecursion(array, 9));
 
             Console.ReadKey();
+        }
+
+        public static void SomeFunction(string s)
+        {
+           Console.WriteLine(ReferenceEquals(Sample, s));
         }
 
         public static int BinarySearch(int[] input, int target)

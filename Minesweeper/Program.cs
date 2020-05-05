@@ -10,7 +10,7 @@ namespace Minesweeper
 
     internal class Program
     {
-        private static int[,] Directions = { {0, 1}, {0, -1}, {1, 0}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1} };
+        private static int[,] directions = { {0, 1}, {0, -1}, {1, 0}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1} };
 
         private static void Main()
         {
@@ -18,7 +18,6 @@ namespace Minesweeper
             // Create Visited HashSet
             
             // Enqueue the current item
-
         }
     }
 }

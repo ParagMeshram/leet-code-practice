@@ -27,7 +27,6 @@ namespace MinWindowSubstring
             var leftIndex = 0;
             var rightIndex = 0;
             var matchCount = 0;
-            var minWindoCount = 0;
 
             while (rightIndex < s.Length)
             {

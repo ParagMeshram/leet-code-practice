@@ -29,6 +29,7 @@ namespace NumberIterator
 
         public int Next()
         {
+            
             if (!HasNext())
                 throw new InvalidOperationException();
 
