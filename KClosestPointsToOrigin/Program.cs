@@ -21,7 +21,7 @@ namespace KClosestPointsToOrigin
 
             // [[1,3],[-2,2]], 1
 
-            var output = solution.KClosest(new[]
+            solution.KClosest(new[]
             {
                 new[] {1, 3},
                 new[] {-2, 2}

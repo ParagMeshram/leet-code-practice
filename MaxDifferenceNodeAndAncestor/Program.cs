@@ -21,6 +21,29 @@ namespace MaxDifferenceNodeAndAncestor
         }
     }
 
+    public class SolutionGood
+    {
+        private int diff = 0;
+        public int MaxAncestorDiff(TreeNode root)
+        {
+            diff = 0;
+            DFS(root, root.val, 0);
+            return diff;
+        }
+        public void DFS(TreeNode root, int min, int max)
+        {
+            if (root == null) return;
+
+            min = Math.Min(min, root.val);
+            max = Math.Max(max, root.val);
+
+            diff = Math.Max(diff, max - min);
+
+            DFS(root.left, min, max);
+            DFS(root.right, min, max);
+        }
+    }
+
     public class Solution
     {
         public int MaxAncestorDiff(TreeNode root)
@@ -28,7 +51,7 @@ namespace MaxDifferenceNodeAndAncestor
             var lmin = int.MaxValue;
             var lmax = int.MinValue;
 
-            var rmin = int.MaxValue;
+            var rmin =int.MaxValue;
             var rmax = int.MinValue;
 
             if (root == null) return 0;

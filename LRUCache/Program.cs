@@ -24,14 +24,16 @@ namespace LRUCache.LinkedHashMap.Optimised
 {
     using System.Collections.Generic;
 
-    public class CacheItem
-    {
-        public int Key { get; set; }
-        public int Value { get; set; }
-    }
+   
 
     public class LRUCache
     {
+        private class CacheItem
+        {
+            public int Key { get; set; }
+            public int Value { get; set; }
+        }
+
         private readonly int capacity;
         private readonly LinkedList<CacheItem> lru;
         private readonly IDictionary<int, LinkedListNode<CacheItem>> cache;

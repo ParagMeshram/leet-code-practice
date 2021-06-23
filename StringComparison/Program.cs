@@ -1,21 +1,18 @@
 ﻿namespace StringComparison
 {
     using System;
+    using System.Linq;
+    using System.Collections;
     using System.Collections.Generic;
+    using System.Threading.Tasks;
     using StringComparison = System.StringComparison;
 
     public static class CharComparision
     {
         public static readonly CharComparer CurrentCulture = new CharComparer(StringComparison.CurrentCulture);
-
-        public static readonly CharComparer CurrentCultureIgnoreCase =
-            new CharComparer(StringComparison.CurrentCultureIgnoreCase);
-
+        public static readonly CharComparer CurrentCultureIgnoreCase = new CharComparer(StringComparison.CurrentCultureIgnoreCase);
         public static readonly CharComparer InvariantCulture = new CharComparer(StringComparison.InvariantCulture);
-
-        public static readonly CharComparer InvariantCultureIgnoreCase =
-            new CharComparer(StringComparison.InvariantCultureIgnoreCase);
-
+        public static readonly CharComparer InvariantCultureIgnoreCase = new CharComparer(StringComparison.InvariantCultureIgnoreCase);
         public static readonly CharComparer Ordinal = new CharComparer(StringComparison.Ordinal);
         public static readonly CharComparer OrdinalIgnoreCase = new CharComparer(StringComparison.OrdinalIgnoreCase);
 
@@ -37,10 +34,74 @@
 
     internal class Program
     {
-        private static void Main()
+        public class Deque
         {
+            private LinkedList<int> list = new LinkedList<int>();
+
+            
+
+            public void EnqueueFront(int value)
+            {
+
+            }
+
+            public void EnqueueBack(int value)
+            {
+
+            }
+
+            public void DequeueFront()
+            {
+
+            }
+
+            public void DequeueBack()
+            {
+
+            }
+        }
+
+        public class User
+        {
+            public User()
+            {
+                
+            }
+        }
+
+
+        private async static Task Main()
+        { 
+            var user = new object();
+
+            if (user is {})
+            {
+                
+            }
+
+
+            var directions = new [,] { { 1, 2 }, { 2, 1 }, { -2, 1 }, { -1, 2 }, { -1, -2 }, { -2, -1 }, { 2, -1 }, { 1, -2 } };
+
+            // *** Wrong **
+            foreach (var direction in directions) //^^^ :(
+            {
+                Console.WriteLine(direction);
+            }
+
+            for(var index = 0; index < directions.GetLength(0); index++) //^^^
+            {
+                Console.WriteLine(directions[index, 0]);
+            }
+
+
             var sortedList = new SortedList<int, int>();
 
+            var comparer = Comparer<int>.Default;
+
+            Console.WriteLine(Math.Sign(0));
+            
+            Console.WriteLine(comparer.Compare(34, 22));
+            
             var i = 5;
             var j = 5;
 

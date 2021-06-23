@@ -51,33 +51,29 @@ namespace SubarraySumEqualsK
     // SUM[1..3] => PREFIX[3 + 1] - PREFIX[1] => 10 -  1 => 9
 
     public class SolutionPrefixSum
-    {
-        public int SubarraySum(int[] nums, int k)
+    { public int SubarraySum(int[] nums, int k)
         {
             if (nums == null || nums.Length == 0) return 0;
 
-            var prefix = new int[nums.Length + 1];
+            var n = nums.Length;
+            var prefix = new int[n + 1];
 
-            prefix[0] = 0;
+            var sum = 0;
 
-            for (var index = 1; index < prefix.Length; index++)
+            for (var index = 1; index < n - 1; index++)
             {
-                prefix[index] = prefix[index - 1] + nums[index - 1];
+                prefix[index] = prefix[index - 1] + nums[index];
             }
 
-            var count = 0;
-
-            for (var start = 0; start < nums.Length; start++)
+            for (var i = 0; i < n - 1; i++)
             {
-                for (var end = start; end < nums.Length; end++)
+                for (var j = i + 1; j < n; j++)
                 {
-                    var sum = prefix[end] - prefix[start];
-
-                    if (sum == k) count++;
+                    if (prefix[i] - prefix[j] == k) sum++;
                 }
             }
 
-            return count;
+            return sum;
         }
     }
 }

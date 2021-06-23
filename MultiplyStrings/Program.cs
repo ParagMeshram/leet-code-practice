@@ -7,8 +7,21 @@ namespace MultiplyStrings
     {
         private static void Main()
         {
+            new Solution().Multiply("123", "456");
         }
     }
+
+    /*
+        11
+        123
+      * 456
+     ======
+        638
+        15-
+         --
+     ======
+    
+    */
 
     public class Solution
     {

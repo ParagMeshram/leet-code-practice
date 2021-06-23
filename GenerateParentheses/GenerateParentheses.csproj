@@ -4,12 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B7C9EC60-1A3A-4C1C-BC0E-0505CAB78B1C}</ProjectGuid>
+    <ProjectGuid>{EE351135-BE06-4A7D-B486-2A4825051358}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>StringComparison</RootNamespace>
-    <AssemblyName>StringComparison</AssemblyName>
+    <RootNamespace>GenerateParentheses</RootNamespace>
+    <AssemblyName>GenerateParentheses</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <LangVersion>8.0</LangVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
